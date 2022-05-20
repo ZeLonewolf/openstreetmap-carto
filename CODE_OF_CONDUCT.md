@@ -50,6 +50,7 @@ These actions are explicitly forbidden in OpenStreetMap Carto spaces:
 - Discrimination based on age, disability, gender, nationality, ethnicity, religion, sexuality, or similar personal characteristic.
 - Bullying or systematic harassment.
 - Unwelcome sexual advances.
+- Revealing identifying information about a user against their wishes
 - Incitement to any of these.
 
 ## Moderation
