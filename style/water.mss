@@ -20,8 +20,7 @@
   [waterway = 'dock'],
   [landuse = 'basin'],
   [natural = 'water'],
-  [landuse = 'reservoir'],
-  [waterway = 'riverbank'] {
+  [landuse = 'reservoir'] {
     [int_intermittent = 'no'] {
       polygon-fill: @water-color;
       [way_pixels >= 4] { polygon-gamma: 0.75; }

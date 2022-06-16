@@ -30,7 +30,7 @@ polygon:
   water:
     # The indentation here makes sense in the SQL output
     where: |-
-      waterway IN ('dock', 'riverbank', 'canal')
+      waterway IN ('dock', 'canal')
           OR landuse IN ('reservoir', 'basin')
           OR "natural" IN ('water', 'glacier')
   way_area_z6:

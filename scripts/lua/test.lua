@@ -66,7 +66,6 @@ assert(isarea({area = "no", landuse = "forest"}) == 0, "test failed: explicit no
 assert(isarea({leisure = "track"}) == 0, "test failed: leisure=track")
 assert(isarea({area = "yes", leisure = "track"}) == 1, "test failed: leisure=track with area tag")
 assert(isarea({waterway = "river"}) == 0, "test failed: river")
-assert(isarea({waterway = "riverbank"}) == 1, "test failed: river")
 assert(isarea({highway = "services"}) == 1, "test failed: river")
 assert(isarea({natural="cliff"}) == 0, "test failed: cliff") -- issue #3084
 assert(isarea({building = "no"}) == 0, "test failed: building=no")

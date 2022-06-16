@@ -244,7 +244,7 @@ Layer:
               THEN 'yes' ELSE 'no' END AS int_intermittent
           FROM planet_osm_polygon
           WHERE
-            (waterway IN ('dock', 'riverbank')
+            (waterway = 'dock')
               OR landuse IN ('reservoir', 'basin')
               OR "natural" IN ('water', 'glacier'))
             AND building IS NULL
