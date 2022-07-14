@@ -611,7 +611,11 @@
     marker-clip: false;
     [religion = 'christian'] {
       marker-file: url('symbols/religion/christian.svg');
-      [denomination = 'jehovahs_witness']{
+      // Some Christian denominations do not use a cross, so reset them to the default marker
+      [denomination = 'jehovahs_witness'],
+      [denomination = 'la_luz_del_mundo'],
+      [denomination = 'iglesia_ni_cristo'],
+      [denomination = 'mormon'] {
         marker-file: url('symbols/amenity/place_of_worship.svg');
       }
     }
@@ -2518,8 +2522,7 @@
     text-halo-fill: @standard-halo-fill;
   }
 
-  [feature = 'amenity_hospital'][zoom >= 16],
-  [feature = 'healthcare_hospital'][zoom >= 16] {
+  [feature = 'amenity_hospital'][zoom >= 16] {
     text-name: "[name]";
     text-fill: @health-color;
     text-size: @standard-font-size;
@@ -2536,27 +2539,7 @@
   [feature = 'amenity_pharmacy'],
   [feature = 'amenity_doctors'],
   [feature = 'amenity_dentist'],
-  [feature = 'amenity_veterinary'],
-  [feature = 'healthcare_alternative'],
-  [feature = 'healthcare_audiologist'],
-  [feature = 'healthcare_birthing_center'],
-  [feature = 'healthcare_blood_bank'],
-  [feature = 'healthcare_blood_donation'],
-  [feature = 'healthcare_centre'],
-  [feature = 'healthcare_clinic'],
-  [feature = 'healthcare_dentist'],
-  [feature = 'healthcare_dialysis'],
-  [feature = 'healthcare_doctor'],
-  [feature = 'healthcare_laboratory'],
-  [feature = 'healthcare_midwife'],
-  [feature = 'healthcare_occupational_therapist'],
-  [feature = 'healthcare_optometrist'],
-  [feature = 'healthcare_physiotherapist'],
-  [feature = 'healthcare_podiatrist'],
-  [feature = 'healthcare_psychotherapist'],
-  [feature = 'healthcare_rehabilitation'],
-  [feature = 'healthcare_speech_therapist'],
-  [feature = 'healthcare_yes'] {
+  [feature = 'amenity_veterinary'] {
     [zoom >= 17] {
       text-name: "[name]";
       text-size: @standard-font-size;
